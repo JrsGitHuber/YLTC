@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension point="org.eclipse.ui.commands">
+      <category name="Sample Category" id="YL.commands.category"/>
+      <!--测试-->
+      <command name="Sample Command" categoryId="YL.commands.category" id="YL.commands.sampleCommand"/>
+      
+      <!--技术标准搭建器-->
+      <command name="原料标准搭建" categoryId="YL.commands.category" id="YL.commands.techStandardCommand"/>
+       <!--原料技术标准报表-->
+      <command name="原料标准生成" categoryId="YL.commands.category" id="YL.commands.materialtechStandardCommand"/> 
+       <!--技术标准搭建器新增-->
+      <command name="产品标准搭建" categoryId="YL.commands.category" id="YL.commands.techStandardModifyCommand"/>
+       <!--产品技术标准报表-->
+      <command name="产品技术标准报表" categoryId="YL.commands.category" id="YL.commands.endProtechStandardCommand"/> 
+      
+      <!--配方搭建器-->
+      <command name="单个配方构建" categoryId="YL.commands.category" id="YL.commands.formulatorCommand"/>
+       <!--配方生成器修改版本-->
+      <command name="组合配方构建" categoryId="YL.commands.category" id="YL.commands.formulatorModifyCommand"/>
+       <!--生产配方表-->
+      <command name="生产配方" categoryId="YL.commands.category" id="YL.commands.produceFormulaExcelCommand"/>
+      <!--财务配方表-->
+      <command name="财务配方" categoryId="YL.commands.category" id="YL.commands.financeFormulaExcelCommand"/>
+      <!--订单配方表-->
+      <command name="产品订单" categoryId="YL.commands.category" id="YL.commands.orderFormulaExcelCommand"/>
+       <!--冷饮生产配方报表word形式-->
+      <command name="冷饮生产配方" categoryId="YL.commands.category" id="YL.commands.coldDrinkFormulaExcelCommand"/>
+      <!--冷饮配方搭建器-->
+      <command name="冷饮配方搭建" categoryId="YL.commands.category" id="YL.commands.coldFormulatorCommand"/>
+      <!--奶粉配方搭建器-->
+      <command name="奶粉配方搭建" categoryId="YL.commands.category" id="YL.commands.milkPowderFormulatorCommand"/>  
+      <!--配方合规检查报表-->
+      <command name="配方合规检查" categoryId="YL.commands.category" id="YL.commands.formulatorLegalCheckCommand"/>
+      <!--配方对比开发报表-->
+ 	  <command name="配方比较" categoryId="YL.commands.category" id="YL.commands.formulaCompareCommand"/>
+ 	   <!--液体标签生成器-->
+      <command name="液态标签生成" categoryId="YL.commands.category" id="YL.commands.labelGeneratorCommand"/>
+       <!--固体标签生成器-->
+      <command name="固态标签生成" categoryId="YL.commands.category" id="YL.commands.labelGeneratorSolidCommand"/>
+      
+      
+      
+      <!--创意初审判定-->
+      <command name="创意初审判定" categoryId="YL.commands.category" id="YL.commands.firstTrailJugeCommand"/> 
+       <!--创意审核判定-->
+      <command name="创意审核判定" categoryId="YL.commands.category" id="YL.commands.secondTrailJugeCommand"/> 
+      
+      <!--创意评分一属性-->
+      <command name="战略价值评分" categoryId="YL.commands.category" id="YL.commands.creativeScoreOneCommand"/> 
+      <!--创意评分四属性-->
+      <command name="专业性评分" categoryId="YL.commands.category" id="YL.commands.creativeScoreFourCommand"/> 
+       <!--创意总评-->
+      <command name="创意总评" categoryId="YL.commands.category" id="YL.commands.creativeSumCommand"/> 
+       <!--点子判定-->
+      <command name="点子判定" categoryId="YL.commands.category" id="YL.commands.creativeJugeCommand"/> 
+       <!--非点子判定-->
+      <command name="非点子判定" categoryId="YL.commands.category" id="YL.commands.creativeNoJugeCommand"/> 
+      <!--二次点子判定-->
+      <command name="二次点子判定" categoryId="YL.commands.category" id="YL.commands.creativeSecondJugeCommand"/> 
+  	  
+     
+      <!--液奶绩效打分-->
+      <command name="液奶绩效打分" categoryId="YL.commands.category" id="YL.commands.milkKPIScoreCommand"/> 
+      <!--液奶绩效统计-->
+      <command name="液奶绩效统计" categoryId="YL.commands.category" id="YL.commands.milkKPIScoreSumCommand"/> 
+      
+        
+      <!--法规导入-->
+      <command name="法规导入" categoryId="YL.commands.category" id="YL.commands.lawImportCommand"/>
+      <!--PDF转换-->
+      <command name="PDF转换" categoryId="YL.commands.category" id="YL.commands.pdfConvertCommand"/>
+       <!--发文系统-->
+      <command name="发文" categoryId="YL.commands.category" id="YL.commands.dispatchDocumentToProjectCommand"/>
+      <!--原料使用情况查询报表-->
+      <command name="原料使用情况查询" categoryId="YL.commands.category" id="YL.commands.materialUseQueryCommand"/>
+      <!--液奶大事记-->
+      <command name="液奶大事记" categoryId="YL.commands.category" id="YL.commands.projectMemorabiliaCommand"/>
+      
+      <!--项目统计报表-->
+      <command name="项目统计报表" categoryId="YL.commands.category" id="YL.commands.projectStatisticsCommand"/>
+      
+   </extension>
+   
+   
+   <extension point="org.eclipse.ui.handlers">
+  	  <!--测试-->
+  	  <handler commandId="YL.commands.sampleCommand" class="com.yl.handlers.SampleHandler"/>
+      <!--配方搭建器-->
+      <handler commandId="YL.commands.formulatorCommand" class="com.yl.handlers.SampleHandler"/>
+      <!--配方生成器修改版本-->
+      <handler commandId=" YL.commands.formulatorModifyCommand" class="com.yl.handlers.SampleHandler"/>
+      <!--冷饮配方搭建器-->
+      <handler commandId=" YL.commands.coldFormulatorCommand" class="com.yl.handlers.SampleHandler"/>
+      <!--奶粉配方搭建器-->
+      <handler commandId=" YL.commands.milkPowderFormulatorCommand" class="com.yl.handlers.SampleHandler"/>
+      <!--标准技术搭建器-->
+      <handler commandId="YL.commands.techStandardCommand" class="com.yl.handlers.SampleHandler"/>
+      <!--法规导入-->
+      <handler commandId=" YL.commands.lawImportCommand" class="com.yl.handlers.SampleHandler"/>
+      <!--配方合规检查报表-->
+      <handler commandId=" YL.commands.formulatorLegalCheckCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--标准技术搭建器新增-->
+       <handler commandId="YL.commands.techStandardModifyCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--发文系统-->
+       <handler commandId="YL.commands.dispatchDocumentToProjectCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--PDF转换-->
+       <handler commandId="YL.commands.pdfConvertCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--生产配方表-->
+       <handler commandId="YL.commands.produceFormulaExcelCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--财务配方表-->
+       <handler commandId="YL.commands.financeFormulaExcelCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--订单配方表-->
+       <handler commandId="YL.commands.orderFormulaExcelCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--液态标签生成器-->
+       <handler commandId="YL.commands.labelGeneratorCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--固态标签生成器-->
+       <handler commandId="YL.commands.labelGeneratorSolidCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--原料使用情况查询报表-->
+       <handler commandId="YL.commands.materialUseQueryCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--配方对比开发报表-->
+       <handler commandId="YL.commands.formulaCompareCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--原料技术标准报表-->
+       <handler commandId="YL.commands.materialtechStandardCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--辅料技术标准报表-->
+       <handler commandId="YL.commands.accessoriestechStandardCommand" class="com.yl.handlers.SampleHandler"/>
+        <!--产品技术标准报表-->
+       <handler commandId="YL.commands.endProtechStandardCommand" class="com.yl.handlers.SampleHandler"/>
+        <!--半成品技术标准报表-->
+       <handler commandId="YL.commands.halfProtechStandardCommand" class="com.yl.handlers.SampleHandler"/>
+      
+       <!--冷饮生产配方报表word版本-->
+       <handler commandId="YL.commands.coldDrinkFormulaExcelCommand" class="com.yl.handlers.SampleHandler"/>
+       
+       <!--创意初审判定-->
+       <handler commandId="YL.commands.firstTrailJugeCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--创意审核判定-->
+       <handler commandId="YL.commands.secondTrailJugeCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--创意评分一属性-->
+       <handler commandId="YL.commands.creativeScoreOneCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--创意评分四属性-->
+       <handler commandId="YL.commands.creativeScoreFourCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--创意总评-->
+       <handler commandId="YL.commands.creativeSumCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--点子判定-->
+       <handler commandId="YL.commands.creativeJugeCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--非点子判定-->
+       <handler commandId="YL.commands.creativeNoJugeCommand" class="com.yl.handlers.SampleHandler"/>
+        <!--二次点子判定-->
+       <handler commandId="YL.commands.creativeSecondJugeCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--液奶绩效打分-->
+       <handler commandId="YL.commands.milkKPIScoreCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--液奶绩效统计-->
+       <handler commandId="YL.commands.milkKPIScoreSumCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--液奶大事记-->
+       <handler commandId="YL.commands.projectMemorabiliaCommand" class="com.yl.handlers.SampleHandler"/>
+       <!--项目统计报表-->
+       <handler commandId="YL.commands.projectStatisticsCommand" class="com.yl.handlers.SampleHandler"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings">
+      <key commandId="YL.commands.sampleCommand" contextId="org.eclipse.ui.contexts.window" sequence="M1+6" schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+   
+   
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu label="伊利工具" mnemonic="M" id="YL.menus.sampleMenu">
+         	<!--测试-->
+         
+         	<command commandId="YL.commands.sampleCommand"  id="YL.menus.sampleCommand">
+         	<visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.sampleCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+         	</command>
+         	
+             <!--标准技术搭建器-->
+             <command commandId="YL.commands.techStandardCommand"  id="YL.menus.techStandardCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.techStandardCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--原料技术标准报表-->
+             <command commandId="YL.commands.materialtechStandardCommand"  id="YL.menus.materialtechStandardCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.materialtechStandardCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <separator name="group2" visible="true"></separator>
+             
+             <!--标准技术搭建器新增-->
+             <command commandId="YL.commands.techStandardModifyCommand"  id="YL.menus.techStandardModifyCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.techStandardModifyCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--产品技术标准报表-->
+             <command commandId="YL.commands.endProtechStandardCommand"  id="YL.menus.endProtechStandardCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.endProtechStandardCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <separator name="group3" visible="true"></separator>
+             
+             
+             <!--配方搭建器-->
+             <command commandId="YL.commands.formulatorCommand"  id="YL.menus.formulatorCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.formulatorCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--配方生成器修改版本-->
+             <command commandId="YL.commands.formulatorModifyCommand"  id="YL.menus.formulatorModifyCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.formulatorModifyCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--生产配方表-->
+             <command commandId="YL.commands.produceFormulaExcelCommand"  id="YL.menus.produceFormulaExcelCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.produceFormulaExcelCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+      		 <!--财务配方表-->
+      		 <command commandId="YL.commands.financeFormulaExcelCommand"  id="YL.menus.financeFormulaExcelCommand">
+      		 <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.financeFormulaExcelCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+      		 </command>
+      		 <!--订单配方表-->
+      		 <command commandId="YL.commands.orderFormulaExcelCommand"  id="YL.menus.orderFormulaExcelCommand">
+      		 <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.orderFormulaExcelCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+      		 </command>
+      		 <!--冷饮生产配方报表word版本-->
+      		 <command commandId="YL.commands.coldDrinkFormulaExcelCommand"  id="YL.menus.coldDrinkFormulaExcelCommand">
+      		 <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.coldDrinkFormulaExcelCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+      		 </command>
+      		 <!--冷饮配方搭建器-->
+             <command commandId="YL.commands.coldFormulatorCommand"  id="YL.menus.coldFormulatorCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.coldFormulatorCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--奶粉配方搭建器-->
+      		 <command commandId="YL.commands.milkPowderFormulatorCommand"  id="YL.menus.milkPowderFormulatorCommand">
+      		 <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.milkPowderFormulatorCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+      		 </command>
+             <!--配方合规检查报表-->
+             <command commandId="YL.commands.formulatorLegalCheckCommand"  id="YL.menus.formulatorLegalCheckCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.formulatorLegalCheckCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--配方对比开发报表-->
+             <command commandId="YL.commands.formulaCompareCommand"  id="YL.menus.formulaCompareCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.formulaCompareCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--液态标签生成器-->
+             <command commandId="YL.commands.labelGeneratorCommand"  id="YL.menus.labelGeneratorCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.labelGeneratorCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--固态标签生成器-->
+             <command commandId="YL.commands.labelGeneratorSolidCommand"  id="YL.menus.labelGeneratorSolidCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.labelGeneratorSolidCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <separator name="group4" visible="true"></separator>
+             
+             <menu label="创意管理" >
+              <!--创意初步审判定-->
+             <command commandId="YL.commands.firstTrailJugeCommand"  id="YL.menus.firstTrailJugeCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.firstTrailJugeCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--创意审核判定-->
+             <command commandId="YL.commands.secondTrailJugeCommand"  id="YL.menus.secondTrailJugeCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.secondTrailJugeCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             
+             <!--创意评分一属性-->
+             <command commandId="YL.commands.creativeScoreOneCommand"  id="YL.menus.creativeScoreOneCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.creativeScoreOneCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--创意评分四属性-->
+             <command commandId="YL.commands.creativeScoreFourCommand"  id="YL.menus.creativeScoreFourCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.creativeScoreFourCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--总分-->
+             <command commandId="YL.commands.creativeSumCommand"  id="YL.menus.creativeSumCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.creativeSumCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--点子判定-->
+             <command commandId="YL.commands.creativeJugeCommand"  id="YL.menus.creativeJugeCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.creativeJugeCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--非点子判定-->
+             <command commandId="YL.commands.creativeNoJugeCommand"  id="YL.menus.creativeNoJugeCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.creativeNoJugeCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+              <!--二次点子判定-->
+             <command commandId="YL.commands.creativeSecondJugeCommand"  id="YL.menus.creativeSecondJugeCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.creativeSecondJugeCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             </menu>
+             <separator name="group5" visible="true"></separator>
+             
+             
+             <!--液奶绩效打分-->
+      		 <command commandId="YL.commands.milkKPIScoreCommand"  id="YL.menus.milkKIPScoreCommand">
+      		 <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.milkKPIScoreCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+      		 </command>
+      		 <!--液奶绩效统计-->
+      		 <command commandId="YL.commands.milkKPIScoreSumCommand"  id="YL.menus.milkKIPScoreSumCommand">
+      		 <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.milkKPIScoreSumCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+      		 </command>
+             <separator name="group6" visible="true"></separator>
+             
+             
+             <!--法规导入-->
+             <command commandId="YL.commands.lawImportCommand"  id="YL.menus.lawImportCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.lawImportCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--PDF转换-->
+             <command commandId="YL.commands.pdfConvertCommand"  id="YL.menus.pdfConvertCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.pdfConvertCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--发文系统-->
+             <command commandId="YL.commands.dispatchDocumentToProjectCommand"  id="YL.menus.dispatchDocumentToProjectCommand">
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.dispatchDocumentToProjectCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             </command>
+             <!--原料使用情况查询报表-->
+             <command commandId="YL.commands.materialUseQueryCommand"  id="YL.menus.materialUseQueryCommand">
+             
+             <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.materialUseQueryCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+					</visibleWhen>
+             
+             </command>
+             
+             <!--液奶大事记-->
+             <command commandId="YL.commands.projectMemorabiliaCommand"  id="YL.menus.projectMemorabiliaCommand"/>
+             
+             <!--项目统计报表-->
+             <command commandId="YL.commands.projectStatisticsCommand"  id="YL.menus.projectStatisticsCommand">
+             	 <visibleWhen>
+						<and>
+	                        <reference
+	                            definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+							<with variable="rac_command_suppression">
+								<not>
+									<iterate operator="or">
+										<equals value="YL.commands.projectStatisticsCommand" /> 
+									</iterate>
+								</not>
+							</with>
+	                    </and>
+				 </visibleWhen>
+             </command>
+             
+         </menu>
+         
+      </menuContribution>
+   </extension>
+
+</plugin>
