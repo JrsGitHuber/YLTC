@@ -124,6 +124,7 @@ class UI extends JDialog {
 	}
 	
 	public void dispose(){
+		// ’‚¿Ô «≤‚ ‘
 		super.dispose();
 	}
 }
