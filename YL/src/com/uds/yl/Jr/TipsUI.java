@@ -118,13 +118,14 @@ class UI extends JDialog {
 	}
 	
 	private void SetBounds(Rectangle rectangle){
+		// 这是测试1
+		// 这是测试1
 		int centerX = rectangle.x + rectangle.width / 2;
 		int centerY = rectangle.y + rectangle.height / 2;
 		setBounds(centerX - width/2, centerY - height/2, width, height);
 	}
 	
 	public void dispose(){
-		// 这里是测试
 		super.dispose();
 	}
 }
